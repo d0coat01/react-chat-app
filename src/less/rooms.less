@@ -1,0 +1,18 @@
+.rooms {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rooms li {
+  width: calc(~'100%' - @nav-padding * 2);
+  cursor: pointer;
+  padding: @nav-padding;
+}
+.rooms__selected {
+  background-color: @color-theme-hover;
+}
+.rooms li:hover {
+  background-color: @color-theme-hover;
+}

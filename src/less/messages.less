@@ -1,0 +1,115 @@
+.messages {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 100%;
+}
+
+.messages h1, h2, h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.nav {
+  width: @nav-width;
+  background-color: @color-theme;
+  color: white;
+  height: 100%;
+}
+
+.nav__profile {
+  width: calc(~'100%' - @nav-padding * 2);
+  padding: @nav-padding;
+}
+
+.nav__user {
+  font-weight: bold;
+  font-size: 110%;
+  margin: 5px 0;
+}
+
+.nav__online_time {
+  font-size: 90%;
+}
+
+.chat {
+  width: calc(~'100%' - @nav-width);
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+}
+
+.chat__users {
+  padding-bottom: 10px;
+  border-bottom: 2px solid darken(@chat-background-color, 40%);
+  margin: 0;
+}
+.chat__messages {
+  height: 75vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: @chat-background-color;
+}
+
+.chat__messages li {
+  max-width: 50%;
+}
+.chat__current-user {
+  font-weight: bold;
+  color: red;
+}
+
+.chat__current-user-message {
+  align-self: flex-end;
+}
+.chat__current-user-message .chat__sender {
+  display:none;
+}
+
+.chat__sender {
+  margin: 10px;
+  color: darken(@chat-background-color, 40%);
+}
+
+.chat__message-text {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  margin:5px;
+}
+
+.chat__current-user-message .chat__message-text {
+  background-color: @color-theme;
+  color: white;
+}
+.room__send form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 10px 20px 10px 10px;
+
+}
+.room__message {
+  width: 80%;
+  height: 30px;
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-right: auto;
+}
+.room__submit {
+  font-size: 20px;
+  border: none;
+  color: @link-color;
+  cursor:pointer;
+  align-self: center;
+}
+
+.room__submit:hover {
+  color: @link-color-hover;
+}

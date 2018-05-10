@@ -1,0 +1,31 @@
+.login {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  min-width:300px;
+  width:80%;
+}
+.login input, .login button, .login div{
+  margin: 5px 0;
+  height: 30px;
+  font-size: 18px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.login__submit {
+  width: 100%;
+  background-color: red;
+  color: white;
+  border: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login__submit:hover {
+  background-color: gray;
+}
