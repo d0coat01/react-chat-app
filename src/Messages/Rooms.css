@@ -1,0 +1,17 @@
+.rooms {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rooms li {
+  cursor: pointer;
+  padding: 10px;
+}
+.rooms__selected {
+  background-color: #cc0000;
+}
+.rooms li:hover {
+  background-color: #cc0000;
+}
