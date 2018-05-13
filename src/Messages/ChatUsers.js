@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class ChatUsers extends Component {
   render() {
-    const users = this.props.users.map((user, i) => {
+    const usersArray = Array.isArray(this.props.users) ? this.props.users : [];
+    const users = usersArray.map((user, i) => {
       const comma = this.props.users.length - 1 === i ? "" : ", ";
       const selected_user = user===this.props.current_user ? "chat__current-user" : "";
       return (

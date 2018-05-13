@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 class ChatMessages extends Component {
   componentDidMount() {
     this.scrollToBottom();
@@ -11,7 +12,8 @@ class ChatMessages extends Component {
   }
   render() {
     const current_user = this.props.current_user;
-    const messages = this.props.messages.map((message, id) => {
+    const messagesArray = Array.isArray(this.props.messages) ? this.props.messages : [];
+    const messages = messagesArray.map((message, id) => {
       const isCurrentUser = message.name === current_user ? "chat__current-user-message" : "";
       return (
         <li key={id} className={isCurrentUser}>
