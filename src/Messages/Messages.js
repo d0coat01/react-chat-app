@@ -14,9 +14,6 @@ class Messages extends Component {
     this.setupRoom(sessionStorage.getItem('selected_room_id'));
   }
   selectRoom(room) {
-    this.setState({
-      selected_room: room
-    });
     sessionStorage.setItem('selected_room_id', room.id);
     this.setupRoom(room.id);
   }
@@ -36,6 +33,7 @@ class Messages extends Component {
     });
   }
   render() {
+      const room_id = (this.state.selected_room && typeof parseInt(this.state.selected_room.id, 10) === "number") ? this.state.selected_room.id : null;
       const current_user = this.state.username;
       const users = this.state.users;
       const header = this.state.selected_room ? this.state.selected_room.name : "Welcome, " + current_user + ". Please select a room.";
@@ -45,7 +43,7 @@ class Messages extends Component {
           <div className="chat">
             <h1>{header}</h1>
             <ChatUsers users={users} current_user={current_user} />
-            <Chat />
+            <Chat room_id={room_id} current_user={current_user}/>
           </div>
         </div>
       )

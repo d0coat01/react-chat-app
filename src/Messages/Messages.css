@@ -83,6 +83,7 @@
   border-radius: 20px;
   padding: 10px;
   margin:5px;
+  word-wrap: break-word;
 }
 
 .chat__current-user-message .chat__message-text {
@@ -106,11 +107,11 @@
 .room__submit {
   font-size: 20px;
   border: none;
-  color: blue;
+  color: #5e9bff;
   cursor:pointer;
   align-self: center;
 }
 
 .room__submit:hover {
-  color: black;
+  color: blue;
 }
